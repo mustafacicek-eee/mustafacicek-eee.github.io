@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mustafa Çiçek</title>
+<meta name="description" content="Mustafa Çiçek — electrical &amp; electronics engineer building small, fast tools for macOS, Android and the browser.">
+<meta name="color-scheme" content="dark">
+<style>
+/* Layout: one screen — header, two-column main (intro | project grid), footer */
+:root{
+  --bg:#0E1013; --surface:#161A1F; --line:#242A31; --chip:#2E353D;
+  --fg:#E8E6E1; --soft:#C9CCD1; --body:#B4B9C0; --muted:#9BA1AA; --accent:#F2A541;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--fg)}
+body{font-family:var(--sans);-webkit-font-smoothing:antialiased}
+a{color:var(--fg);text-decoration:none}
+a:hover{color:#fff}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.page{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;
+  padding-block:48px 32px;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px));
+  max-width:1360px;margin:0 auto}
+header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.logo{font-family:var(--mono);font-size:15px}
+.logo span{color:var(--accent)}
+nav{display:flex;gap:28px;font-family:var(--mono);font-size:14px}
+main{flex:1;display:flex;flex-wrap:wrap;gap:56px;align-items:center;padding-block:32px}
+.intro{flex:1 1 400px;max-width:520px;display:flex;flex-direction:column;gap:24px}
+.status{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:13px;color:var(--muted)}
+.status i{width:8px;height:8px;border-radius:50%;background:var(--accent)}
+h1{margin:0;font-size:clamp(44px,6vw,64px);line-height:1.02;font-weight:600;letter-spacing:-.03em;text-wrap:balance}
+.lead{margin:0;font-size:clamp(17px,1.6vw,20px);line-height:1.5;color:var(--soft);max-width:34em}
+dl{margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 32px;font-size:15px}
+dt{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--muted);margin-bottom:6px}
+dd{margin:0}
+.work{flex:999 1 540px;min-width:0;display:flex;flex-direction:column;gap:14px}
+.work-head{display:flex;justify-content:space-between;align-items:baseline;font-family:var(--mono);font-size:13px;letter-spacing:.06em;color:var(--muted)}
+.work-head a{color:var(--accent);letter-spacing:0}
+.grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 22px;display:flex;flex-direction:column;gap:8px}
+.card-top{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.card h2{margin:0;font-size:17px;font-weight:600}
+.tag{font-family:var(--mono);font-size:11px;color:var(--muted);border:1px solid var(--chip);border-radius:999px;padding:3px 10px;white-space:nowrap}
+.card p{margin:0;font-size:14px;line-height:1.5;color:var(--body)}
+.legal{flex-basis:100%;margin:0;font-size:11px;line-height:1.5}
+footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-family:var(--mono);font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:18px}
+@media (max-width:640px){
+  .page{padding-block:28px 24px}
+  main{gap:40px;padding-block:28px}
+  nav{gap:20px}
+  .grid{grid-template-columns:minmax(0,1fr)}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <div class="logo">mustafacicek<span>.dev</span></div>
+    <nav aria-label="Links">
+      <a href="https://github.com/mustafacicek-eee">GitHub ↗</a>
+      <a href="https://www.linkedin.com/in/mustafacicek-eee/">LinkedIn ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <div class="status"><i aria-hidden="true"></i>Istanbul · Open to work</div>
+      <h1>Mustafa Çiçek</h1>
+      <p class="lead">Electrical &amp; electronics engineer who builds small, fast tools for macOS, Android and the browser — and contributes to open source.</p>
+      <dl>
+        <div><dt>EDUCATION</dt><dd>Boğaziçi University, EEE</dd></div>
+        <div><dt>BUILDS FOR</dt><dd>macOS · Android · Chrome</dd></div>
+        <div><dt>BUILT</dt><dd>17 apps &amp; extensions</dd></div>
+        <div><dt>OPEN SOURCE</dt><dd>Contributor to OpenSnek</dd></div>
+      </dl>
+    </section>
+
+    <section class="work" aria-labelledby="work-title">
+      <div class="work-head">
+        <span id="work-title">SELECTED WORK</span>
+        <a href="https://github.com/mustafacicek-eee">All projects →</a>
+      </div>
+      <ul class="grid">
+        <li class="card"><div class="card-top"><h2>Ferah</h2><span class="tag">macOS</span></div><p>Mac cleaner that also finds duplicate files.</p></li>
+        <li class="card"><div class="card-top"><h2>KablosuzGonder</h2><span class="tag">macOS</span></div><p>Tiny wireless book transfer to e-readers running KOReader.</p></li>
+        <li class="card"><div class="card-top"><h2>MouseTune</h2><span class="tag">macOS</span></div><p>Configures supported gaming mice on macOS. A fork of OpenSnek.</p></li>
+        <li class="card"><div class="card-top"><h2>WakeLaunch</h2><span class="tag">Android TV</span></div><p>Opens your chosen app when the TV boots or wakes from standby.</p></li>
+        <li class="card"><div class="card-top"><h2>Playlist Multiselect</h2><span class="tag">Chrome · Firefox</span></div><p>Select and manage many YouTube playlist items at once.</p></li>
+        <li class="card"><div class="card-top"><h2>İş Radarı</h2><span class="tag">macOS</span></div><p>Collects, filters and tracks job listings in one place.</p></li>
+        <li class="card"><div class="card-top"><h2>Kitap Okuyucu</h2><span class="tag">macOS</span></div><p>Reads PDF and EPUB books aloud.</p></li>
+        <li class="card"><div class="card-top"><h2>VoltWipe</h2><span class="tag">Android</span></div><p>Automatic cache cleaner for Android.</p></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 Mustafa Çiçek</span>
+    <span>Built by hand · hosted on GitHub Pages</span>
+    <p class="legal">Independent projects, not affiliated with or endorsed by Apple, Google, Mozilla, Razer or any other company named here. All trademarks belong to their owners.</p>
+  </footer>
+</div>
+</body>
+</html>
