@@ -56,9 +56,9 @@
 *{box-sizing:border-box}
 html,body{margin:0;background:var(--bg);color:var(--fg)}
 body{font-family:var(--sans);-webkit-font-smoothing:antialiased;font-feature-settings:"cv11","ss01";position:relative;overflow-x:hidden}
-/* Background: a soft warm glow at the top and a faint dot grid that fades out — depth without shadows. */
+/* Background: a soft glow at the top that fades out — depth without shadows. */
 body::before{content:"";position:absolute;inset:0 0 auto 0;height:100%;max-height:900px;pointer-events:none;z-index:0;
-  background:radial-gradient(60% 55% at 20% 0%,var(--glow),transparent 70%),radial-gradient(circle at 1px 1px,var(--dot) 1px,transparent 1.5px) 0 0/22px 22px;
+  background:radial-gradient(60% 55% at 20% 0%,var(--glow),transparent 70%);
   -webkit-mask-image:linear-gradient(to bottom,#000 30%,transparent);mask-image:linear-gradient(to bottom,#000 30%,transparent)}
 a{color:var(--fg);text-decoration:none}
 a:hover{color:var(--accent)}
@@ -206,8 +206,7 @@ footer{margin-top:auto;display:flex;justify-content:space-between;flex-wrap:wrap
         <p class="lead rise" style="--i:3"><span data-l="en">I build AI automation and integrations, Python tools and backend services, plus small, fast apps for macOS, Android and the browser.</span><span data-l="tr">AI otomasyonu ve entegrasyonu, Python araçları ve backend servisleri geliştiriyorum. Ayrıca macOS, Android ve tarayıcı için küçük, hızlı uygulamalar yazıyorum.</span></p>
       </div>
       <dl class="rise" style="--i:4">
-        <div><dt><span data-l="en">EDUCATION</span><span data-l="tr">EĞİTİM</span></dt><dd><span data-l="en">Boğaziçi University, EEE</span><span data-l="tr">Boğaziçi Üniversitesi, EEM</span></dd></div>
-        <div><dt><span data-l="en">PROJECTS</span><span data-l="tr">GELİŞTİRDİKLERİM</span></dt><dd><span data-l="en">17 apps &amp; extensions</span><span data-l="tr">17 uygulama ve eklenti</span></dd></div>
+                <div><dt><span data-l="en">PROJECTS</span><span data-l="tr">GELİŞTİRDİKLERİM</span></dt><dd><span data-l="en">17 apps &amp; extensions</span><span data-l="tr">17 uygulama ve eklenti</span></dd></div>
         <div><dt><span data-l="en">OPEN SOURCE</span><span data-l="tr">AÇIK KAYNAK</span></dt><dd><a class="ddlink" href="https://github.com/search?q=author%3Amustafacicek-eee+is%3Apr+is%3Amerged+-user%3Amustafacicek-eee&amp;type=pullrequests" target="_blank" rel="noopener"><span data-l="en">77 merged PRs incl. Spec Kit, PyPSA, Homebrew</span><span data-l="tr">Spec Kit, PyPSA ve Homebrew dahil 77 birleştirilmiş PR</span> ↗</a></dd></div>
       </dl>
     </section>
@@ -230,21 +229,23 @@ footer{margin-top:auto;display:flex;justify-content:space-between;flex-wrap:wrap
           <p><span data-l="en">Select and manage many YouTube playlist items at once.</span><span data-l="tr">YouTube oynatma listelerinde birçok videoyu tek seferde seçip yönetir.</span></p>
           <p class="note"><span data-l="en">Copy, move, sort, find duplicates and deleted/private videos. No data collection.</span><span data-l="tr">Kopyala, taşı, sırala; kopya ve silinmiş/gizli videoları bul. Veri toplamaz.</span></p>
           <div class="chips"><span class="chip plat">Chrome · Firefox</span><span class="chip">Firefox Add-ons</span><span class="chip"><span data-l="en">Open source</span><span data-l="tr">Açık kaynak</span></span></div></li>
-        <li class="card rise" style="--i:7"><div class="card-top"><span class="ico" aria-hidden="true">F</span><h2>Ferah</h2></div>
+        <li class="card rise" style="--i:7"><div class="card-top"><span class="ico"><img src="icon-ferah.png" alt="" width="26" height="26"></span><h2>Ferah</h2></div>
           <p><span data-l="en">Mac cleaner that also finds duplicate files.</span><span data-l="tr">Kopya dosyaları da bulan Mac temizleyici.</span></p>
+<p class="note"><span data-l="en">Clears caches, logs and temp files and sorts duplicates by size. You choose what gets deleted; no internet connection.</span><span data-l="tr">Önbellek, günlük ve geçici dosyaları temizler, kopyaları boyuta göre sıralar. Neyin silineceğini sen seçersin; internete bağlanmaz.</span></p>
           <div class="chips"><span class="chip plat">macOS</span></div></li>
-        <li class="card rise" style="--i:8"><div class="card-top"><span class="ico" aria-hidden="true">K</span><h2>KablosuzGonder</h2></div>
+        <li class="card rise" style="--i:8"><div class="card-top"><span class="ico"><img src="icon-kablosuzgonder.png" alt="" width="26" height="26"></span><h2>KablosuzGonder</h2></div>
           <p><span data-l="en">Tiny wireless book transfer to e-readers running KOReader.</span><span data-l="tr">KOReader kullanan e-okuyuculara kablosuz kitap gönderen küçük araç.</span></p>
           <p class="note"><span data-l="en">A lightweight alternative to sending books with Calibre.</span><span data-l="tr">Kitap göndermek için Calibre’ye hafif bir alternatif.</span></p>
           <div class="chips"><span class="chip plat">macOS</span></div></li>
-        <li class="card rise" style="--i:9"><div class="card-top"><span class="ico" aria-hidden="true">İ</span><h2>İş Radarı</h2></div>
+        <li class="card rise" style="--i:9"><div class="card-top"><span class="ico"><img src="icon-isradari.png" alt="" width="26" height="26"></span><h2>İş Radarı</h2></div>
           <p><span data-l="en">Collects, filters and tracks job listings in one place.</span><span data-l="tr">İş ilanlarını tek yerde toplar, filtreler ve takip eder.</span></p>
           <p class="note"><span data-l="en">Sorts listings into stages — to apply, applied, won’t apply — with versioned backups.</span><span data-l="tr">İlanları aşamalara ayırır (başvurulacak, başvuruldu, başvurulmayacak); sürümlü yedekleme.</span></p>
           <div class="chips"><span class="chip plat">macOS</span></div></li>
-        <li class="card rise" style="--i:10"><div class="card-top"><span class="ico" aria-hidden="true">K</span><h2>Kitap Okuyucu</h2></div>
+        <li class="card rise" style="--i:10"><div class="card-top"><span class="ico"><img src="icon-kitapokuyucu.png" alt="" width="26" height="26"></span><h2>Kitap Okuyucu</h2></div>
           <p><span data-l="en">Reads PDF and EPUB books aloud.</span><span data-l="tr">PDF ve EPUB kitapları sesli okur.</span></p>
+<p class="note"><span data-l="en">Uses the built-in macOS voices with adjustable speed and voice; the current sentence is highlighted. Remembers your place and works fully offline.</span><span data-l="tr">macOS’in yerleşik sesleriyle okur; hız ve ses ayarlanır, okunan cümle vurgulanır. Kaldığın yeri hatırlar, tamamen çevrimdışı çalışır.</span></p>
           <div class="chips"><span class="chip plat">macOS</span></div></li>
-        <li class="card rise" style="--i:11"><div class="card-top"><span class="ico" aria-hidden="true">V</span><h2>VoltWipe</h2></div>
+        <li class="card rise" style="--i:11"><div class="card-top"><span class="ico"><img src="icon-voltwipe.png" alt="" width="26" height="26"></span><h2>VoltWipe</h2></div>
           <p><span data-l="en">Automatic cache cleaner for Android.</span><span data-l="tr">Android için otomatik önbellek temizleyici.</span></p>
           <p class="note"><span data-l="en">Written in Kotlin; preparing for release on Google Play.</span><span data-l="tr">Kotlin ile yazıldı; Google Play’de yayına hazırlanıyor.</span></p>
           <div class="chips"><span class="chip plat">Android</span></div></li>
