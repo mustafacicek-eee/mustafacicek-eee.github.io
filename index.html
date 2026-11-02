@@ -3,20 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mustafa Çiçek — Electrical &amp; Electronics Engineer</title>
+<title>Mustafa Çiçek — Electrical &amp; Electronics Engineer · AI &amp; Python</title>
 <meta name="description" content="Mustafa Çiçek — electrical &amp; electronics engineer · AI engineering, Python and backend.">
 <meta name="color-scheme" content="dark light">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="canonical" href="https://mustafacicek.dev/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://mustafacicek.dev/">
-<meta property="og:title" content="Mustafa Çiçek — Electrical &amp; Electronics Engineer">
+<meta property="og:title" content="Mustafa Çiçek — Electrical &amp; Electronics Engineer · AI &amp; Python">
 <meta property="og:description" content="AI automation and integrations, Python tools and backend services; apps for macOS, Android and the browser; open-source contributions.">
 <meta property="og:image" content="https://mustafacicek.dev/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Mustafa Çiçek — Electrical &amp; Electronics Engineer · mustafacicek.dev">
+<meta property="og:image:alt" content="Mustafa Çiçek — Electrical &amp; Electronics Engineer · AI Engineering · Python · Backend">
 <meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Mustafa Çiçek", "jobTitle": "Electrical & Electronics Engineer", "url": "https://mustafacicek.dev/", "email": "mailto:support@mustafacicek.dev", "address": {"@type": "PostalAddress", "addressLocality": "Istanbul", "addressCountry": "TR"}, "alumniOf": {"@type": "CollegeOrUniversity", "name": "Boğaziçi University"}, "knowsAbout": ["AI engineering", "Python", "Backend development", "Electrical and electronics engineering"], "sameAs": ["https://github.com/mustafacicek-eee", "https://www.linkedin.com/in/mustafacicek-eee/"]}</script>
 <script>
 /* Apply the saved theme and language before first paint, so the page does not flash. */
 (function(){
@@ -81,14 +82,18 @@ nav{display:flex;flex-wrap:wrap;gap:8px 28px;font-family:var(--mono);font-size:1
 :root[data-theme="light"] .tbtn .moon{display:none}
 @media (prefers-color-scheme: light){:root:not([data-theme="dark"]) .tbtn .sun{display:block}:root:not([data-theme="dark"]) .tbtn .moon{display:none}}
 main{flex:1;display:flex;flex-direction:column;justify-content:center;gap:26px;padding-block:20px}
-.intro{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px 64px}
-.who{flex:1 1 420px;max-width:780px;display:flex;flex-direction:column;gap:12px}
+.intro{display:flex;flex-direction:column;gap:20px}
+.who{display:flex;flex-direction:column;gap:12px}
+@media (min-width:1100px){.intro{flex-direction:row;justify-content:space-between;align-items:flex-end;gap:48px}.who{flex:1 1 0;min-width:0}}
 .status{font-family:var(--mono);font-size:13px;color:var(--muted)}
 h1{margin:0;font-size:clamp(38px,4.2vw,56px);line-height:1.02;font-weight:650;letter-spacing:-.035em;text-wrap:balance}
 .role{margin:0;font-size:clamp(19px,1.8vw,23px);line-height:1.35;font-weight:500;letter-spacing:-.015em;color:var(--fg)}
 .role b{color:var(--accent);font-weight:500}
-.lead{margin:0;font-size:clamp(16px,1.3vw,17.5px);line-height:1.55;color:var(--soft);max-width:44em}
-dl{flex:0 1 460px;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 32px;font-size:15px}
+.lead{margin:0;font-size:clamp(16px,1.3vw,17.5px);line-height:1.55;color:var(--soft);max-width:46em}
+dl{margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 32px;font-size:15px}
+dl>div:last-child{grid-column:1/-1}
+@media (min-width:640px) and (max-width:1099px){dl{grid-template-columns:repeat(2,auto);justify-content:start;column-gap:56px}}
+@media (min-width:1100px){dl{flex:none;grid-template-columns:repeat(2,auto);column-gap:48px}}
 dt{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--muted);margin-bottom:6px}
 dd{margin:0}
 .ddlink{text-decoration:underline;text-decoration-color:var(--chip);text-underline-offset:3px}
@@ -106,8 +111,8 @@ dd{margin:0}
 .card h2{margin:0;font-size:15px;line-height:1.2;font-weight:600;letter-spacing:-.01em}
 .card h2 a::after{content:"";position:absolute;inset:0;border-radius:12px}
 .tag{font-family:var(--mono);font-size:11px;color:var(--muted);border:1px solid var(--chip);border-radius:999px;padding:3px 10px;white-space:nowrap}
-.card p{margin:0;font-size:13px;line-height:1.4;color:var(--body);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.card p.note{font-size:12.5px;color:var(--muted);display:block;-webkit-line-clamp:unset;overflow:visible}
+.card p{margin:0;font-size:13px;line-height:1.4;color:var(--body)}
+.card p.note{font-size:12.5px;color:var(--muted)}
 .chips{display:flex;flex-wrap:wrap;gap:5px;margin-top:auto;padding-top:2px}
 .chip{font-family:var(--mono);font-size:10px;line-height:1;padding:4px 7px;border-radius:6px;color:var(--accent);background:var(--accent-soft);border:1px solid transparent}
 .chip.plat{color:var(--muted);background:transparent;border-color:var(--chip)}
@@ -194,8 +199,7 @@ footer{margin-top:auto;display:flex;justify-content:space-between;flex-wrap:wrap
       </div>
       <dl class="rise" style="--i:4">
         <div><dt><span data-l="en">EDUCATION</span><span data-l="tr">EĞİTİM</span></dt><dd><span data-l="en">Boğaziçi University, EEE</span><span data-l="tr">Boğaziçi Üniversitesi, EEM</span></dd></div>
-        <div><dt><span data-l="en">WORK MODE</span><span data-l="tr">ÇALIŞMA ŞEKLİ</span></dt><dd><span data-l="en">On-site · Hybrid · Remote</span><span data-l="tr">Ofis · Hibrit · Uzaktan</span></dd></div>
-        <div><dt><span data-l="en">BUILT</span><span data-l="tr">GELİŞTİRDİKLERİM</span></dt><dd><span data-l="en">17 apps &amp; extensions</span><span data-l="tr">17 uygulama ve eklenti</span></dd></div>
+        <div><dt><span data-l="en">PROJECTS</span><span data-l="tr">GELİŞTİRDİKLERİM</span></dt><dd><span data-l="en">17 apps &amp; extensions</span><span data-l="tr">17 uygulama ve eklenti</span></dd></div>
         <div><dt><span data-l="en">OPEN SOURCE</span><span data-l="tr">AÇIK KAYNAK</span></dt><dd><a class="ddlink" href="https://github.com/search?q=author%3Amustafacicek-eee+is%3Apr+is%3Amerged+-user%3Amustafacicek-eee&amp;type=pullrequests" target="_blank" rel="noopener"><span data-l="en">77 merged PRs incl. Spec Kit, PyPSA, Homebrew</span><span data-l="tr">Spec Kit, PyPSA ve Homebrew dahil 77 birleştirilmiş PR</span> ↗</a></dd></div>
       </dl>
     </section>
@@ -250,7 +254,8 @@ footer{margin-top:auto;display:flex;justify-content:space-between;flex-wrap:wrap
 (function(){
   var d=document.documentElement;
   function save(k,v){try{localStorage.setItem(k,v);}catch(e){}}
-  function setLang(l){d.setAttribute("data-lang",l);d.lang=l;}
+  var TITLES={en:"Mustafa Çiçek — Electrical & Electronics Engineer · AI & Python",tr:"Mustafa Çiçek — Elektrik-Elektronik Mühendisi · AI & Python"};
+  function setLang(l){d.setAttribute("data-lang",l);d.lang=l;document.title=TITLES[l];}
   setLang(d.getAttribute("data-lang")==="tr"?"tr":"en");
   document.getElementById("lang").addEventListener("click",function(){
     var l=d.getAttribute("data-lang")==="tr"?"en":"tr";setLang(l);save("lang",l);
