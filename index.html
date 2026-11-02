@@ -119,13 +119,16 @@ dd{margin:0}
 .chip.plat{color:var(--muted);background:transparent;border-color:var(--chip)}
 .legal{flex-basis:100%;margin:0;font-size:11px;line-height:1.5}
 footer{margin-top:auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-family:var(--mono);font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:18px}
-/* Cursor: the visitor's own system cursor (their size and colour) everywhere; a blue lightning bolt over everything clickable (hotspot at the bolt's top tip).
+/* Cursor: a blue arrow everywhere; a blue lightning bolt over everything clickable (hotspot at the bolt's top tip).
    PNGs at 1x and 2x so the cursor stays sharp on Retina/high-DPI screens; each declaration falls back to the one before it,
    and to the normal cursor where custom cursors are unsupported. Only for mouse/trackpad users. */
 @media (pointer:fine){
+  html{cursor:url(cur-arrow-d.png) 6 5,auto;cursor:-webkit-image-set(url(cur-arrow-d.png) 1x,url(cur-arrow-d@2x.png) 2x) 6 5,auto;cursor:image-set(url(cur-arrow-d.png) 1x,url(cur-arrow-d@2x.png) 2x) 6 5,auto}
   a,button,summary,label,[role="button"],.card{cursor:url(cur-bolt-d.png) 15 3,pointer;cursor:-webkit-image-set(url(cur-bolt-d.png) 1x,url(cur-bolt-d@2x.png) 2x) 15 3,pointer;cursor:image-set(url(cur-bolt-d.png) 1x,url(cur-bolt-d@2x.png) 2x) 15 3,pointer}
+  :root[data-theme="light"]{cursor:url(cur-arrow-l.png) 6 5,auto;cursor:-webkit-image-set(url(cur-arrow-l.png) 1x,url(cur-arrow-l@2x.png) 2x) 6 5,auto;cursor:image-set(url(cur-arrow-l.png) 1x,url(cur-arrow-l@2x.png) 2x) 6 5,auto}
   :root[data-theme="light"] a,:root[data-theme="light"] button,:root[data-theme="light"] summary,:root[data-theme="light"] label,:root[data-theme="light"] [role="button"],:root[data-theme="light"] .card{cursor:url(cur-bolt-l.png) 15 3,pointer;cursor:-webkit-image-set(url(cur-bolt-l.png) 1x,url(cur-bolt-l@2x.png) 2x) 15 3,pointer;cursor:image-set(url(cur-bolt-l.png) 1x,url(cur-bolt-l@2x.png) 2x) 15 3,pointer}
   @media (prefers-color-scheme: light){
+    :root:not([data-theme="dark"]){cursor:url(cur-arrow-l.png) 6 5,auto;cursor:-webkit-image-set(url(cur-arrow-l.png) 1x,url(cur-arrow-l@2x.png) 2x) 6 5,auto;cursor:image-set(url(cur-arrow-l.png) 1x,url(cur-arrow-l@2x.png) 2x) 6 5,auto}
     :root:not([data-theme="dark"]) a,:root:not([data-theme="dark"]) button,:root:not([data-theme="dark"]) summary,:root:not([data-theme="dark"]) label,:root:not([data-theme="dark"]) [role="button"],:root:not([data-theme="dark"]) .card{cursor:url(cur-bolt-l.png) 15 3,pointer;cursor:-webkit-image-set(url(cur-bolt-l.png) 1x,url(cur-bolt-l@2x.png) 2x) 15 3,pointer;cursor:image-set(url(cur-bolt-l.png) 1x,url(cur-bolt-l@2x.png) 2x) 15 3,pointer}
   }
 }
