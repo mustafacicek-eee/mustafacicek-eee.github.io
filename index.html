@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mustafa Çiçek</title>
-<meta name="description" content="Mustafa Çiçek — electrical &amp; electronics engineer building small, fast tools for macOS, Android and the browser.">
+<meta name="description" content="Mustafa Çiçek — electrical &amp; electronics engineer focused on Python automation, data collection and backend development.">
 <meta name="color-scheme" content="dark">
 <style>
 /* Layout: one screen — header, two-column main (intro | project grid), footer */
@@ -26,7 +26,7 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius
 header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
 .logo{font-family:var(--mono);font-size:15px}
 .logo span{color:var(--accent)}
-nav{display:flex;gap:28px;font-family:var(--mono);font-size:14px}
+nav{display:flex;flex-wrap:wrap;gap:8px 28px;font-family:var(--mono);font-size:14px}
 main{flex:1;display:flex;flex-wrap:wrap;gap:56px;align-items:center;padding-block:32px}
 .intro{flex:1 1 400px;max-width:520px;display:flex;flex-direction:column;gap:24px}
 .status{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:13px;color:var(--muted)}
@@ -40,7 +40,10 @@ dd{margin:0}
 .work-head{display:flex;justify-content:space-between;align-items:baseline;font-family:var(--mono);font-size:13px;letter-spacing:.06em;color:var(--muted)}
 .work-head a{color:var(--accent);letter-spacing:0}
 .grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 22px;display:flex;flex-direction:column;gap:8px}
+.card{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 22px;display:flex;flex-direction:column;gap:8px}
+.card h2 a::after{content:"";position:absolute;inset:0;border-radius:12px}
+.card:has(a):hover{border-color:var(--chip)}
+.card h2 a:hover{color:var(--accent)}
 .card-top{display:flex;justify-content:space-between;align-items:center;gap:12px}
 .card h2{margin:0;font-size:17px;font-weight:600}
 .tag{font-family:var(--mono);font-size:11px;color:var(--muted);border:1px solid var(--chip);border-radius:999px;padding:3px 10px;white-space:nowrap}
@@ -62,14 +65,15 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-f
     <nav aria-label="Links">
       <a href="https://github.com/mustafacicek-eee">GitHub ↗</a>
       <a href="https://www.linkedin.com/in/mustafacicek-eee/">LinkedIn ↗</a>
+      <a href="mailto:support@mustafacicek.dev">support@mustafacicek.dev</a>
     </nav>
   </header>
 
   <main>
     <section class="intro">
-      <div class="status"><i aria-hidden="true"></i>Istanbul · Open to work</div>
+      <div class="status">Istanbul</div>
       <h1>Mustafa Çiçek</h1>
-      <p class="lead">Electrical &amp; electronics engineer who builds small, fast tools for macOS, Android and the browser — and contributes to open source.</p>
+      <p class="lead">Electrical &amp; electronics engineer focused on Python automation, data collection and backend development. I also build small, fast tools for macOS, Android and the browser — and contribute to open source.</p>
       <dl>
         <div><dt>EDUCATION</dt><dd>Boğaziçi University, EEE</dd></div>
         <div><dt>BUILDS FOR</dt><dd>macOS · Android · Chrome</dd></div>
@@ -86,9 +90,9 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-f
       <ul class="grid">
         <li class="card"><div class="card-top"><h2>Ferah</h2><span class="tag">macOS</span></div><p>Mac cleaner that also finds duplicate files.</p></li>
         <li class="card"><div class="card-top"><h2>KablosuzGonder</h2><span class="tag">macOS</span></div><p>Tiny wireless book transfer to e-readers running KOReader.</p></li>
-        <li class="card"><div class="card-top"><h2>MouseTune</h2><span class="tag">macOS</span></div><p>Configures supported gaming mice on macOS. A fork of OpenSnek.</p></li>
-        <li class="card"><div class="card-top"><h2>WakeLaunch</h2><span class="tag">Android TV</span></div><p>Opens your chosen app when the TV boots or wakes from standby.</p></li>
-        <li class="card"><div class="card-top"><h2>Playlist Multiselect</h2><span class="tag">Chrome · Firefox</span></div><p>Select and manage many YouTube playlist items at once.</p></li>
+        <li class="card"><div class="card-top"><h2><a href="https://github.com/mustafacicek-eee/MouseTune">MouseTune</a></h2><span class="tag">macOS</span></div><p>Configures supported gaming mice on macOS. A fork of OpenSnek.</p></li>
+        <li class="card"><div class="card-top"><h2><a href="https://github.com/mustafacicek-eee/WakeLaunch">WakeLaunch</a></h2><span class="tag">Android TV</span></div><p>Opens your chosen app when the TV boots or wakes from standby.</p></li>
+        <li class="card"><div class="card-top"><h2><a href="https://addons.mozilla.org/en-US/firefox/addon/playlist-multiselect-youtube/">Playlist Multiselect</a></h2><span class="tag">Chrome · Firefox</span></div><p>Select and manage many YouTube playlist items at once.</p></li>
         <li class="card"><div class="card-top"><h2>İş Radarı</h2><span class="tag">macOS</span></div><p>Collects, filters and tracks job listings in one place.</p></li>
         <li class="card"><div class="card-top"><h2>Kitap Okuyucu</h2><span class="tag">macOS</span></div><p>Reads PDF and EPUB books aloud.</p></li>
         <li class="card"><div class="card-top"><h2>VoltWipe</h2><span class="tag">Android</span></div><p>Automatic cache cleaner for Android.</p></li>
