@@ -88,7 +88,7 @@ main{flex:1;display:flex;flex-direction:column;justify-content:center;gap:26px;p
 .status{font-family:var(--mono);font-size:13px;color:var(--muted)}
 h1{margin:0;font-size:clamp(38px,4.2vw,56px);line-height:1.02;font-weight:650;letter-spacing:-.035em;text-wrap:balance}
 .role{margin:0;font-size:clamp(19px,1.8vw,23px);line-height:1.35;font-weight:500;letter-spacing:-.015em;color:var(--fg)}
-.role b{color:var(--accent);font-weight:500}
+.role b{color:var(--accent);font-weight:500;display:block}
 .lead{margin:0;font-size:clamp(16px,1.3vw,17.5px);line-height:1.55;color:var(--soft);max-width:46em}
 dl{margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 32px;font-size:15px}
 dl>div:last-child{grid-column:1/-1}
@@ -148,14 +148,17 @@ footer{margin-top:auto;display:flex;justify-content:space-between;flex-wrap:wrap
 .card:hover{border-color:var(--hover-line);box-shadow:var(--lift),inset 0 1px 0 rgba(255,255,255,.05)}
 @media (min-width:820px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media (min-width:1100px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
-@media (min-width:1100px) and (max-height:700px){
+@media (min-width:1100px) and (max-height:770px){
   main{gap:14px!important;padding-block:8px!important}
+  .card{padding:10px 12px}
+  .page{padding-block:12px 10px!important}
+  .lead{font-size:15px}
   h1{font-size:36px!important}
   .card{gap:4px}
   .card p.note{font-size:12px}
   .legal{font-size:10.5px}
 }
-@media (min-width:1100px) and (max-height:780px){
+@media (min-width:1100px) and (max-height:900px){
   .card{gap:4px}
   .chips{padding-top:0}
   .card p.note{font-size:12px}
@@ -175,6 +178,7 @@ footer{margin-top:auto;display:flex;justify-content:space-between;flex-wrap:wrap
   nav{gap:8px 20px}
   .grid{grid-template-columns:minmax(0,1fr)}
 }
+@media (min-width:1100px){footer{flex-wrap:nowrap;align-items:flex-start;gap:28px}footer>span{flex:none}.legal{flex:1 1 0}}
 </style>
 </head>
 <body>
@@ -200,7 +204,7 @@ footer{margin-top:auto;display:flex;justify-content:space-between;flex-wrap:wrap
     <section class="intro">
       <div class="who">
                 <h1 class="rise" style="--i:1">Mustafa Çiçek</h1>
-        <p class="role rise" style="--i:2"><span data-l="en">Electrical &amp; Electronics Engineer (Boğaziçi University) · <b>AI Engineering · Python · Backend</b></span><span data-l="tr">Elektrik-Elektronik Mühendisi (Boğaziçi Üniversitesi) · <b>AI Engineering · Python · Backend</b></span></p>
+        <p class="role rise" style="--i:2"><span data-l="en">Electrical &amp; Electronics Engineer (Boğaziçi University) <b>AI Engineering · Python · Backend</b></span><span data-l="tr">Elektrik-Elektronik Mühendisi (Boğaziçi Üniversitesi) <b>AI Engineering · Python · Backend</b></span></p>
         <p class="lead rise" style="--i:3"><span data-l="en">I build AI automation and integrations, Python tools and backend services, plus small, fast apps for macOS, Android and the browser. My capstone researched the security of EtherCAT industrial networks, and I have installed industrial monitoring and control systems.</span><span data-l="tr">AI otomasyonu ve entegrasyonu, Python araçları ve backend servisleri geliştiriyorum. Ayrıca macOS, Android ve tarayıcı için küçük, hızlı uygulamalar yazıyorum. Bitirme projemde EtherCAT endüstriyel ağlarının güvenliğini araştırdım; endüstriyel izleme ve kontrol sistemleri kurdum.</span></p>
       </div>
       <dl class="rise" style="--i:4">
