@@ -12,7 +12,7 @@ jobs:
     env:
       GH_TOKEN: ${{ github.token }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Count merged PRs
         run: |
           grep -q 'id="pr-count">' index.html || { echo "pr-count marker missing"; exit 1; }
