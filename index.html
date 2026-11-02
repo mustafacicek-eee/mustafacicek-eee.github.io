@@ -19,13 +19,12 @@
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Mustafa Çiçek", "jobTitle": "Electrical & Electronics Engineer · AI & Python", "url": "https://mustafacicek.dev/", "email": "mailto:support@mustafacicek.dev", "address": {"@type": "PostalAddress", "addressLocality": "Istanbul", "addressCountry": "TR"}, "alumniOf": {"@type": "CollegeOrUniversity", "name": "Boğaziçi University"}, "knowsAbout": ["AI engineering", "Python", "Backend development", "Electrical and electronics engineering"], "sameAs": ["https://github.com/mustafacicek-eee", "https://www.linkedin.com/in/mustafacicek-eee/"]}</script>
 <script>
-/* Apply the saved theme and language before first paint, so the page does not flash. */
+/* Apply the saved theme before first paint, so the page does not flash. The page always opens in English. */
 (function(){
   var d=document.documentElement,t=null,l=null;
-  try{t=localStorage.getItem("theme");l=localStorage.getItem("lang");}catch(e){}
+  try{t=localStorage.getItem("theme");}catch(e){}
   if(t==="light"||t==="dark")d.setAttribute("data-theme",t);
-  if(!l)l=(navigator.language||"").toLowerCase().indexOf("tr")===0?"tr":"en";
-  d.setAttribute("data-lang",l==="tr"?"tr":"en");
+  d.setAttribute("data-lang","en");
 })();
 </script>
 <style>
@@ -258,7 +257,7 @@ footer{margin-top:auto;display:flex;justify-content:space-between;flex-wrap:wrap
   function setLang(l){d.setAttribute("data-lang",l);d.lang=l;document.title=TITLES[l];}
   setLang(d.getAttribute("data-lang")==="tr"?"tr":"en");
   document.getElementById("lang").addEventListener("click",function(){
-    var l=d.getAttribute("data-lang")==="tr"?"en":"tr";setLang(l);save("lang",l);
+    var l=d.getAttribute("data-lang")==="tr"?"en":"tr";setLang(l);
   });
   document.getElementById("theme").addEventListener("click",function(){
     var cur=d.getAttribute("data-theme")||(matchMedia("(prefers-color-scheme: light)").matches?"light":"dark");
