@@ -1,0 +1,33 @@
+name: Update PR count
+on:
+  schedule:
+    - cron: "17 3 * * *"   # every day 06:17 Istanbul time
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Count merged PRs
+        run: |
+          grep -q 'id="pr-count">' index.html || { echo "pr-count marker missing"; exit 1; }
+          n=$(gh api -X GET search/issues \
+            -f q='author:mustafacicek-eee is:pr is:merged -user:mustafacicek-eee' \
+            --jq .total_count)
+          [ "$n" -gt 0 ] || { echo "count failed"; exit 1; }
+          echo "merged PRs: $n"
+          sed -i -E "s|(<span class=\"num\" id=\"pr-count\">)[0-9]+|\1$n|" index.html
+          echo "N=$n" >> "$GITHUB_ENV"
+      - name: Commit if changed
+        run: |
+          git diff --quiet && { echo "no change"; exit 0; }
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -am "Update merged PR count to $N"
+          git push
+          gh api -X POST "repos/${{ github.repository }}/pages/builds" || true
