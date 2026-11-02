@@ -91,6 +91,8 @@ h1{margin:0;font-size:clamp(38px,4.2vw,56px);line-height:1.02;font-weight:650;le
 dl{flex:0 1 460px;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 32px;font-size:15px}
 dt{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--muted);margin-bottom:6px}
 dd{margin:0}
+.ddlink{text-decoration:underline;text-decoration-color:var(--chip);text-underline-offset:3px}
+.ddlink:hover{text-decoration-color:currentColor}
 .work{min-width:0;display:flex;flex-direction:column;gap:12px}
 .work-head,.sec-head{display:flex;justify-content:space-between;align-items:baseline;font-family:var(--mono);font-size:13px;letter-spacing:.06em;color:var(--muted)}
 .work-head a{color:var(--accent);letter-spacing:0}
@@ -194,7 +196,7 @@ footer{margin-top:auto;display:flex;justify-content:space-between;flex-wrap:wrap
         <div><dt><span data-l="en">EDUCATION</span><span data-l="tr">EĞİTİM</span></dt><dd><span data-l="en">Boğaziçi University, EEE</span><span data-l="tr">Boğaziçi Üniversitesi, EEM</span></dd></div>
         <div><dt><span data-l="en">BUILDS FOR</span><span data-l="tr">PLATFORMLAR</span></dt><dd>macOS · Android · Chrome</dd></div>
         <div><dt><span data-l="en">BUILT</span><span data-l="tr">GELİŞTİRDİKLERİM</span></dt><dd><span data-l="en">17 apps &amp; extensions</span><span data-l="tr">17 uygulama ve eklenti</span></dd></div>
-        <div><dt><span data-l="en">OPEN SOURCE</span><span data-l="tr">AÇIK KAYNAK</span></dt><dd><span data-l="en">77 merged PRs incl. PyPSA, Spec Kit, Homebrew</span><span data-l="tr">PyPSA, Spec Kit ve Homebrew dahil 77 birleştirilmiş PR</span></dd></div>
+        <div><dt><span data-l="en">OPEN SOURCE</span><span data-l="tr">AÇIK KAYNAK</span></dt><dd><a class="ddlink" href="https://github.com/search?q=author%3Amustafacicek-eee+is%3Apr+is%3Amerged&amp;type=pullrequests"><span data-l="en">77 merged PRs incl. PyPSA, Spec Kit, Homebrew</span><span data-l="tr">PyPSA, Spec Kit ve Homebrew dahil 77 birleştirilmiş PR</span> ↗</a></dd></div>
       </dl>
     </section>
 
