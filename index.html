@@ -19,11 +19,11 @@
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Mustafa Çiçek", "jobTitle": "Electrical & Electronics Engineer · AI & Python", "url": "https://mustafacicek.dev/", "email": "mailto:support@mustafacicek.dev", "address": {"@type": "PostalAddress", "addressLocality": "Istanbul", "addressCountry": "TR"}, "alumniOf": {"@type": "CollegeOrUniversity", "name": "Boğaziçi University"}, "knowsAbout": ["AI engineering", "Python", "Backend development", "Electrical and electronics engineering"], "sameAs": ["https://github.com/mustafacicek-eee", "https://www.linkedin.com/in/mustafacicek-eee/"]}</script>
 <script>
-/* Apply the saved theme before first paint, so the page does not flash. The page always opens in English. */
+/* Apply the saved theme (dark by default) before first paint, so the page does not flash. The page always opens in English. */
 (function(){
   var d=document.documentElement,t=null,l=null;
   try{t=localStorage.getItem("theme");}catch(e){}
-  if(t==="light"||t==="dark")d.setAttribute("data-theme",t);
+  d.setAttribute("data-theme",t==="light"?"light":"dark");
   d.setAttribute("data-lang","en");
 })();
 </script>
@@ -69,7 +69,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
 .logo{font-family:var(--mono);font-size:15px}
 .logo span{color:var(--accent)}
-.hright{display:flex;align-items:center;flex-wrap:wrap;gap:12px 24px}
+.hright{margin-left:auto;display:flex;align-items:center;flex-wrap:wrap;gap:12px 24px}
 nav a{display:inline-block}
 nav{display:flex;flex-wrap:wrap;gap:8px 28px;font-family:var(--mono);font-size:14px}
 .toggles{display:flex;gap:8px}
@@ -200,8 +200,8 @@ footer{margin-top:auto;display:flex;justify-content:space-between;flex-wrap:wrap
     <section class="intro">
       <div class="who">
                 <h1 class="rise" style="--i:1">Mustafa Çiçek</h1>
-        <p class="role rise" style="--i:2"><span data-l="en">Electrical &amp; Electronics Engineer · <b>AI Engineering · Python · Backend</b></span><span data-l="tr">Elektrik-Elektronik Mühendisi · <b>AI Engineering · Python · Backend</b></span></p>
-        <p class="lead rise" style="--i:3"><span data-l="en">I build AI automation and integrations, Python tools and backend services, plus small, fast apps for macOS, Android and the browser. B.Sc. from Boğaziçi University; my capstone researched the security of EtherCAT industrial networks, and I have installed industrial monitoring and control systems.</span><span data-l="tr">AI otomasyonu ve entegrasyonu, Python araçları ve backend servisleri geliştiriyorum; ayrıca macOS, Android ve tarayıcı için küçük, hızlı uygulamalar yazıyorum. Boğaziçi Üniversitesi mezunuyum; bitirme projemde EtherCAT endüstriyel ağlarının güvenliğini araştırdım, endüstriyel izleme ve kontrol sistemleri kurdum.</span></p>
+        <p class="role rise" style="--i:2"><span data-l="en">Electrical &amp; Electronics Engineer (Boğaziçi University) · <b>AI Engineering · Python · Backend</b></span><span data-l="tr">Elektrik-Elektronik Mühendisi (Boğaziçi Üniversitesi) · <b>AI Engineering · Python · Backend</b></span></p>
+        <p class="lead rise" style="--i:3"><span data-l="en">I build AI automation and integrations, Python tools and backend services, plus small, fast apps for macOS, Android and the browser. My capstone researched the security of EtherCAT industrial networks, and I have installed industrial monitoring and control systems.</span><span data-l="tr">AI otomasyonu ve entegrasyonu, Python araçları ve backend servisleri geliştiriyorum. Ayrıca macOS, Android ve tarayıcı için küçük, hızlı uygulamalar yazıyorum. Bitirme projemde EtherCAT endüstriyel ağlarının güvenliğini araştırdım; endüstriyel izleme ve kontrol sistemleri kurdum.</span></p>
       </div>
       <dl class="rise" style="--i:4">
                 <div><dt><span data-l="en">PROJECTS</span><span data-l="tr">GELİŞTİRDİKLERİM</span></dt><dd><span data-l="en">17 apps &amp; extensions</span><span data-l="tr">17 uygulama ve eklenti</span></dd></div>
